@@ -1,0 +1,116 @@
+/* Main container styling */
+.order-list-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4; /* Light background for the page */
+}
+
+
+
+/* Sidebar styling */
+.order-list-page .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Allows scrolling */
+}
+
+/* Main content area */
+.order-list-main-content {
+  margin-left: 250px; /* Sidebar width */
+  padding: 20px;
+  margin-top: 70px; /* Space for the Navbar */
+  margin-bottom: 60px; /* Space for the Footer */
+  flex: 1; /* Take up remaining space */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-list-container h2 {
+  color: #377fcc;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Table styling */
+.order-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.order-list-table thead {
+  background-color: #377fcc;
+  color: white;
+}
+
+.order-list-table th,
+.order-list-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.order-list-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.order-list-table th {
+  font-weight: bold;
+}
+
+/* Footer styling */
+.order-list-page .footer {
+  background-color: #377fcc;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 250px; /* Width of Sidebar */
+  width: calc(100% - 250px); /* Adjust width to account for Sidebar */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .order-list-page {
+    flex-direction: column;
+  }
+
+  .order-list-page .navbar {
+    width: 100%;
+    left: 0;
+  }
+
+  .order-list-page .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .order-list-main-content {
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .order-list-page .footer {
+    left: 0;
+    width: 100%;
+  }
+}

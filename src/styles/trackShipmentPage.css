@@ -1,0 +1,118 @@
+/* Main container styling */
+.track-shipment-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light background for the page */
+  }
+  
+
+  
+  /* Sidebar styling */
+  .track-shipment-page .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Allows scrolling */
+  }
+  
+  /* Main content area */
+  .track-shipment-main-content {
+    margin-left: 250px; /* Sidebar width */
+    padding: 20px;
+    margin-top: 70px; /* Space for the Navbar */
+    margin-bottom: 60px; /* Space for the Footer */
+    flex: 1; /* Take up remaining space */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .track-shipment-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .track-shipment-title {
+    color: #377fcc;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  .track-shipment-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .track-shipment-input,
+  .track-shipment-select {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .track-shipment-button {
+    background-color: #377fcc;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .track-shipment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer styling */
+  .track-shipment-page .footer {
+    background-color: #377fcc;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 250px; /* Width of Sidebar */
+    width: calc(100% - 250px); /* Adjust width to account for Sidebar */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .track-shipment-page {
+      flex-direction: column;
+    }
+  
+    .track-shipment-page .navbar {
+      width: 100%;
+      left: 0;
+    }
+  
+    .track-shipment-page .sidebar {
+      width: 100%;
+      position: relative;
+      height: auto;
+      box-shadow: none;
+    }
+  
+    .track-shipment-main-content {
+      margin-left: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .track-shipment-page .footer {
+      left: 0;
+      width: 100%;
+    }
+  }
+  

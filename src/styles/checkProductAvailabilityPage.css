@@ -1,0 +1,71 @@
+/* Main Page Layout */
+.check-product-availability-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 250px; /* Sidebar width */
+  padding: 20px;
+  margin-top: 70px; /* Space for the Navbar */
+  margin-bottom: 60px; /* Space for the Footer */
+}
+
+/* Product Availability Container Styles */
+.check-product-availability-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 80px auto; /* Center the container and provide space for the Navbar and Footer */
+}
+
+.check-product-availability-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Table Styles */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #6693e6;
+}
+
+.product-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0; /* No sidebar on smaller screens */
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .check-product-availability-container {
+    padding: 10px;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .product-table th,
+  .product-table td {
+    padding: 8px 10px;
+  }
+}
